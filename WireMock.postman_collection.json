@@ -1,0 +1,1222 @@
+{
+	"info": {
+		"_postman_id": "efdef6a7-c6fe-4990-9efe-de1d989749ee",
+		"name": "WireMock",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21252724"
+	},
+	"item": [
+		{
+			"name": "Classwork",
+			"item": [
+				{
+					"name": "Calculator",
+					"item": [
+						{
+							"name": "Add",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n  <soap:Body>\r\n    <NumberToWords xmlns=\"http://www.dataaccess.com/webservicesserver/\">\r\n      <ubiNum>501</ubiNum>\r\n      <ubiNum>601</ubiNum>\r\n    </NumberToWords>\r\n  </soap:Body>\r\n</soap:Envelope>"
+								},
+								"url": {
+									"raw": "https://www.dataaccess.com/webservicesserver/NumberConversion.wso",
+									"protocol": "https",
+									"host": [
+										"www",
+										"dataaccess",
+										"com"
+									],
+									"path": [
+										"webservicesserver",
+										"NumberConversion.wso"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "NumberToDollars",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n  <soap:Body>\r\n    <NumberToDollars xmlns=\"http://www.dataaccess.com/webservicesserver/\">\r\n      <dNum>501</dNum>\r\n    </NumberToDollars>\r\n  </soap:Body>\r\n</soap:Envelope>"
+								},
+								"url": {
+									"raw": "https://www.dataaccess.com/webservicesserver/NumberConversion.wso",
+									"protocol": "https",
+									"host": [
+										"www",
+										"dataaccess",
+										"com"
+									],
+									"path": [
+										"webservicesserver",
+										"NumberConversion.wso"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Divide",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8",
+										"type": "text"
+									},
+									{
+										"key": "SOAPAction",
+										"value": "http://tempuri.org/Divide",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n  <soap:Body>\r\n    <Divide xmlns=\"http://tempuri.org/\">\r\n      <intA>30</intA>\r\n      <intB>5</intB>\r\n    </Divide>\r\n  </soap:Body>\r\n</soap:Envelope>"
+								},
+								"url": {
+									"raw": "http://www.dneonline.com/calculator.asmx",
+									"protocol": "http",
+									"host": [
+										"www",
+										"dneonline",
+										"com"
+									],
+									"path": [
+										"calculator.asmx"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Multiply",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8",
+										"type": "text"
+									},
+									{
+										"key": "SOAPAction",
+										"value": "http://tempuri.org/Multiply",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n  <soap:Body>\r\n    <Multiply xmlns=\"http://tempuri.org/\">\r\n      <intA>6</intA>\r\n      <intB>5</intB>\r\n    </Multiply>\r\n  </soap:Body>\r\n</soap:Envelope>"
+								},
+								"url": {
+									"raw": "http://www.dneonline.com/calculator.asmx",
+									"protocol": "http",
+									"host": [
+										"www",
+										"dneonline",
+										"com"
+									],
+									"path": [
+										"calculator.asmx"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Subtract",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8",
+										"type": "text"
+									},
+									{
+										"key": "SOAPAction",
+										"value": "http://tempuri.org/Subtract",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n  <soap:Body>\r\n    <Subtract xmlns=\"http://tempuri.org/\">\r\n      <intA>5</intA>\r\n      <intB>5</intB>\r\n    </Subtract>\r\n  </soap:Body>\r\n</soap:Envelope>"
+								},
+								"url": {
+									"raw": "http://www.dneonline.com/calculator.asmx",
+									"protocol": "http",
+									"host": [
+										"www",
+										"dneonline",
+										"com"
+									],
+									"path": [
+										"calculator.asmx"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Products",
+					"item": [
+						{
+							"name": "Get all products",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://dummyjson.com/products",
+									"protocol": "https",
+									"host": [
+										"dummyjson",
+										"com"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get a single product",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://dummyjson.com/products/1",
+									"protocol": "https",
+									"host": [
+										"dummyjson",
+										"com"
+									],
+									"path": [
+										"products",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Search products",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://dummyjson.com/products/search?q=laptop",
+									"protocol": "https",
+									"host": [
+										"dummyjson",
+										"com"
+									],
+									"path": [
+										"products",
+										"search"
+									],
+									"query": [
+										{
+											"key": "q",
+											"value": "laptop"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Limit and skip products",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://dummyjson.com/products?limit=10&skip=10&select=title,price",
+									"protocol": "https",
+									"host": [
+										"dummyjson",
+										"com"
+									],
+									"path": [
+										"products"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "10"
+										},
+										{
+											"key": "skip",
+											"value": "10"
+										},
+										{
+											"key": "select",
+											"value": "title,price"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get all products categories",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://dummyjson.com/products/categories",
+									"protocol": "https",
+									"host": [
+										"dummyjson",
+										"com"
+									],
+									"path": [
+										"products",
+										"categories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get products of a category",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://dummyjson.com/products/category/laptops",
+									"protocol": "https",
+									"host": [
+										"dummyjson",
+										"com"
+									],
+									"path": [
+										"products",
+										"category",
+										"laptops"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add a new product",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"BMW Pencil\"\r\n\r\n}"
+								},
+								"url": {
+									"raw": "https://dummyjson.com/products/add",
+									"protocol": "https",
+									"host": [
+										"dummyjson",
+										"com"
+									],
+									"path": [
+										"products",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update a product",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n     \"title\": \"iPhone Galaxy +1\"\r\n\r\n}"
+								},
+								"url": {
+									"raw": "https://dummyjson.com/products/1",
+									"protocol": "https",
+									"host": [
+										"dummyjson",
+										"com"
+									],
+									"path": [
+										"products",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete a product",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n     \"title\": \"iPhone Galaxy +1\"\r\n\r\n}"
+								},
+								"url": {
+									"raw": "https://dummyjson.com/products/1",
+									"protocol": "https",
+									"host": [
+										"dummyjson",
+										"com"
+									],
+									"path": [
+										"products",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Homework",
+			"item": [
+				{
+					"name": "HW_01_Users",
+					"item": [
+						{
+							"name": "Get all users",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://dummyjson.com/users",
+									"protocol": "https",
+									"host": [
+										"dummyjson",
+										"com"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get a single user",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://dummyjson.com/users/1",
+									"protocol": "https",
+									"host": [
+										"dummyjson",
+										"com"
+									],
+									"path": [
+										"users",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Search users",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://dummyjson.com/users/search?q=John",
+									"protocol": "https",
+									"host": [
+										"dummyjson",
+										"com"
+									],
+									"path": [
+										"users",
+										"search"
+									],
+									"query": [
+										{
+											"key": "q",
+											"value": "John"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Limit and skip users",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://dummyjson.com/users?limit=5&skip=10&select=firstName,age",
+									"protocol": "https",
+									"host": [
+										"dummyjson",
+										"com"
+									],
+									"path": [
+										"users"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "5"
+										},
+										{
+											"key": "skip",
+											"value": "10"
+										},
+										{
+											"key": "select",
+											"value": "firstName,age"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get user's carts by user id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://dummyjson.com/users/5/carts",
+									"protocol": "https",
+									"host": [
+										"dummyjson",
+										"com"
+									],
+									"path": [
+										"users",
+										"5",
+										"carts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get user's posts by user id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://dummyjson.com/users/5/posts",
+									"protocol": "https",
+									"host": [
+										"dummyjson",
+										"com"
+									],
+									"path": [
+										"users",
+										"5",
+										"posts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get user's todos by user id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://dummyjson.com/users/5/todos",
+									"protocol": "https",
+									"host": [
+										"dummyjson",
+										"com"
+									],
+									"path": [
+										"users",
+										"5",
+										"todos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add a new user",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"content-type": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\":\"Muhammad\",\r\n    \"lastName\": \"Ovi\",\r\n    \"age\": 250\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://dummyjson.com/users/add",
+									"protocol": "https",
+									"host": [
+										"dummyjson",
+										"com"
+									],
+									"path": [
+										"users",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update a user",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"content-type": true
+								}
+							},
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"lastName\": \"Owais\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://dummyjson.com/users/1",
+									"protocol": "https",
+									"host": [
+										"dummyjson",
+										"com"
+									],
+									"path": [
+										"users",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete a user",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://dummyjson.com/users/1",
+									"protocol": "https",
+									"host": [
+										"dummyjson",
+										"com"
+									],
+									"path": [
+										"users",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "HW_02_Countries",
+					"item": [
+						{
+							"name": "List of Countries by Name",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap12:Envelope xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\">\r\n  <soap12:Body>\r\n    <ListOfCountryNamesByName xmlns=\"http://www.oorsprong.org/websamples.countryinfo\">\r\n    </ListOfCountryNamesByName>\r\n  </soap12:Body>\r\n</soap12:Envelope>"
+								},
+								"url": {
+									"raw": "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso",
+									"protocol": "http",
+									"host": [
+										"webservices",
+										"oorsprong",
+										"org"
+									],
+									"path": [
+										"websamples.countryinfo",
+										"CountryInfoService.wso"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Captial City for a Country",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n  <soap:Body>\r\n    <CapitalCity xmlns=\"http://www.oorsprong.org/websamples.countryinfo\">\r\n      <sCountryISOCode>US</sCountryISOCode>\r\n    </CapitalCity>\r\n  </soap:Body>\r\n</soap:Envelope>"
+								},
+								"url": {
+									"raw": "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso",
+									"protocol": "http",
+									"host": [
+										"webservices",
+										"oorsprong",
+										"org"
+									],
+									"path": [
+										"websamples.countryinfo",
+										"CountryInfoService.wso"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Currency for a Country",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n  <soap:Body>\r\n    <CountryCurrency xmlns=\"http://www.oorsprong.org/websamples.countryinfo\">\r\n      <sCountryISOCode>US</sCountryISOCode>\r\n    </CountryCurrency>\r\n  </soap:Body>\r\n</soap:Envelope>"
+								},
+								"url": {
+									"raw": "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso",
+									"protocol": "http",
+									"host": [
+										"webservices",
+										"oorsprong",
+										"org"
+									],
+									"path": [
+										"websamples.countryinfo",
+										"CountryInfoService.wso"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Flag for a Country",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n  <soap:Body>\r\n    <CountryFlag xmlns=\"http://www.oorsprong.org/websamples.countryinfo\">\r\n      <sCountryISOCode>US</sCountryISOCode>\r\n    </CountryFlag>\r\n  </soap:Body>\r\n</soap:Envelope>"
+								},
+								"url": {
+									"raw": "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso",
+									"protocol": "http",
+									"host": [
+										"webservices",
+										"oorsprong",
+										"org"
+									],
+									"path": [
+										"websamples.countryinfo",
+										"CountryInfoService.wso"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "International Phone Code for a Country Copy",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n  <soap:Body>\r\n    <CountryIntPhoneCode xmlns=\"http://www.oorsprong.org/websamples.countryinfo\">\r\n      <sCountryISOCode>US</sCountryISOCode>\r\n    </CountryIntPhoneCode>\r\n  </soap:Body>\r\n</soap:Envelope>"
+								},
+								"url": {
+									"raw": "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso",
+									"protocol": "http",
+									"host": [
+										"webservices",
+										"oorsprong",
+										"org"
+									],
+									"path": [
+										"websamples.countryinfo",
+										"CountryInfoService.wso"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "HW_04",
+					"item": [
+						{
+							"name": "Users",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UserByName",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/users/Yaroslav",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"Yaroslav"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "createUser",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {}
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Ivan\",\r\n\t\"lastName\": \"Lebedev\",\r\n\t\"age\": 15\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/users/createUser",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"createUser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateAge",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {}
+							},
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"age\": 25\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/users/1/updateAge",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"1",
+										"updateAge"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteUser",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {}
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"age\": 25\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/users/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "HW_05",
+					"item": [
+						{
+							"name": "service",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/service/2135dsd/__ss",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"service",
+										"2135dsd",
+										"__ss"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "transaction",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/transaction?price=55&date=2022.31.05",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"transaction"
+									],
+									"query": [
+										{
+											"key": "price",
+											"value": "55"
+										},
+										{
+											"key": "date",
+											"value": "2022.31.05"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "include description and error",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"error_code\":123, \r\n    \"description \":\"Division by zero\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/request",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"request"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "include telephone_number",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"telephone_number\":\"+79246543132\"\r\n    }"
+								},
+								"url": {
+									"raw": "http://localhost:8080/telephone_number",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"telephone_number"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "two_users",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n\t\"users\": [ \r\n\t\t{ \"name\": \"user2\" },\r\n\t\t{ \"name\": \"user1\" }\r\n\t\t] \r\n\t}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/two_users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"two_users"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "HW_06",
+					"item": [
+						{
+							"name": "error",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "<error>\r\n    <error_code>404</error_code>\r\n    <description>Division by zero</description>\r\n</error>",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/error",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"error"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "order",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "<order>333-22-ss</order>",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/order",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"order"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "templating",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/template?nameOfFile=1&fileFormat=.json",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"template"
+									],
+									"query": [
+										{
+											"key": "nameOfFile",
+											"value": "1"
+										},
+										{
+											"key": "fileFormat",
+											"value": ".json"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

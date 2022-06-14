@@ -1,0 +1,20 @@
+{
+    "request": {
+        "urlPathPattern": "/order",
+        "method": "GET",
+        "bodyPatterns" : [ {
+            "matchesXPath" : {
+               "expression": "/order/text()",
+               "matches": "[0-9]{3}-[0-9]{2}-[a-zA-Z0-9]{2}"
+            }
+          } ]
+    },
+    "response": {
+        "status": 200,
+        "delayDistribution": {
+            "type": "uniform",
+            "lower": 290,
+            "upper": 310
+        }
+    }
+}
